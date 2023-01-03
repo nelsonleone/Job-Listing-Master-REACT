@@ -273,7 +273,7 @@ button:focus{
     margin:0;
   }
   .job-position{
-    margin-block:.3em;
+    margin-block:.5em;
   }
   .job-data-container img{
     top:1.7em;
@@ -291,7 +291,7 @@ button:focus{
     padding-left:0;
   }
   .tag-section button{
-    padding-block:.4em;
+    padding-block:.5em;
   }
   .chosen-tags{
     max-height:8rem;
