@@ -158,7 +158,7 @@ h2{
 }
 
 .chosen-tags{
-  max-width:83%;
+  max-width:87%;
   margin:auto;
   position: relative;
   top:-2.3em;
@@ -295,6 +295,6 @@ button:focus{
   }
   .chosen-tags{
     max-height:8rem;
-    max-width:83%;
+    max-width:83% !important;
   }
 }
