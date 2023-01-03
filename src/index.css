@@ -224,6 +224,10 @@ h2{
 
 
 /* Hover and active states */
+button:focus{
+  border:none !important;
+  outline:none !important;
+}
 .tag-section button:hover{
   color:hsl(0, 0%, 100%);
   background-color: var(--pmy-desaturatedDark-Cyan);
