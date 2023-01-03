@@ -291,7 +291,7 @@ button:focus{
     padding-left:0;
   }
   .tag-section button{
-    padding-block:.3em;
+    padding-block:.4em;
   }
   .chosen-tags{
     max-height:8rem;
