@@ -295,5 +295,6 @@ button:focus{
   }
   .chosen-tags{
     max-height:8rem;
+    max-width:83%;
   }
 }
