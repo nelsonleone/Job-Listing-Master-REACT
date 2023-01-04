@@ -158,7 +158,7 @@ h2{
 }
 
 .chosen-tags{
-  max-width:80%;
+  max-width:87%;
   margin:auto;
   position: relative;
   top:-2.3em;
@@ -224,6 +224,10 @@ h2{
 
 
 /* Hover and active states */
+button:focus{
+  border:none !important;
+  outline:none !important;
+}
 .tag-section button:hover{
   color:hsl(0, 0%, 100%);
   background-color: var(--pmy-desaturatedDark-Cyan);
@@ -269,7 +273,7 @@ h2{
     margin:0;
   }
   .job-position{
-    margin-block:.3em;
+    margin-block:.5em;
   }
   .job-data-container img{
     top:1.7em;
@@ -287,9 +291,10 @@ h2{
     padding-left:0;
   }
   .tag-section button{
-    padding-block:.3em;
+    padding-block:.5em;
   }
   .chosen-tags{
     max-height:8rem;
+    max-width:83% !important;
   }
 }
