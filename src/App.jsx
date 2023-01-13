@@ -36,7 +36,7 @@ function App() {
         ){
          return data;
       }else{
-        return;
+        console.log("no",tag)
       }
     })
     setJobsData(newArray)
