@@ -31,6 +31,11 @@ function App() {
         tag ==  data.tools.filter(tool => tool === tag)[0]
         ){
         return data;
+      }else if(tag === data.role &&
+        tag === data.level &&
+        tag === data.languages.filter(language => language === tag)[0] &&
+        tag ==  data.tools.filter(tool => tool === tag)[0]){
+         return data;
       }
     })
     setJobsData(newArray)
