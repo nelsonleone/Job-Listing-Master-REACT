@@ -6,6 +6,7 @@ import Job from './Job';
 function App() {
  const [jobsData,setJobsData] = useState(listData)
  const [tagsArray,setTagsArray] = useState([])
+  const [chosenTagsArray,setChosenTagsArray] = useState([])
  const [removedTagsArray,setRemoveTagsArray] = useState([])
  const [renderTags,setRenderTags] = useState(false)
 
@@ -15,7 +16,10 @@ function App() {
       return new Set([...prevTags,tag])
     })
     setRenderTags(true)
-    renderChosenTag(tag)
+    setChosenTagsArray(prevState => {
+      return [...prevState,tag]
+    })
+    renderChosenTag()
   }
 
 
@@ -24,19 +28,7 @@ function App() {
   // handling the chosen tags , and rendering there contents
   function renderChosenTag(tag){
     const newArray = listData.filter((data,index) => {
-     
-      if(tag === data.role || 
-        tag === data.level || 
-        tag === data.languages.filter(language => language === tag)[0] ||
-        tag ==  data.tools.filter(tool => tool === tag)[0]
-        ){
-        return data;
-      }else if(tag === data.role &&
-        tag === data.level &&
-        tag === data.languages.filter(language => language === tag)[0] &&
-        tag ==  data.tools.filter(tool => tool === tag)[0]){
-         return data;
-      }
+       return chosenTagsArray[index] === tag ? data : return;
     })
     setJobsData(newArray)
   }
