@@ -26,13 +26,28 @@ function App() {
 
 
   // handling the chosen tags , and rendering there contents
-  function renderChosenTag(tag){
+  function renderChosenTag(){
     const newArray = listData.filter((data,index) => {
-       return chosenTagsArray[index] === tag ? data : return;
+       const tag = chosenTagsArray[index];
+      if(tag === data.role || 
+        tag === data.level || 
+        tag === data.languages.filter(language => language === tag)[0] ||
+        tag ==  data.tools.filter(tool => tool === tag)[0]
+        ){
+         return data;
+      }else if(tag === data.role &&
+        tag === data.level &&
+        tag === data.languages.filter(language => language === tag)[0] &&
+        tag ==  data.tools.filter(tool => tool === tag)[0]){
+         return data;
+      }else{
+        return;
+      }
     })
     setJobsData(newArray)
   }
   
+
   function removeTag(tag){
     setTagsArray(prevTags => {
       return [...prevTags].filter(allTags => {
