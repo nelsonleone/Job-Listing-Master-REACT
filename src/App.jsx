@@ -28,33 +28,32 @@ function App() {
   // handling the chosen tags , and rendering there contents
  function renderChosenTag(tag){
     const newArray = listData.filter((data,index) => {
-      if(data.role === tag || data.role === tagsArray[index]){
-        return data
-      }
-      if(data.level === tag || data.level === tagsArray.filter(tag => {
-         return tag === data.level
-      }){
-        return data
-      }
-      if(data.languages.filter(language => language === tag || language === tagsArray.filter(tag => {
-        return tag === language})
-       ))
-      {
-        return data
-      }
-      if(data.tools.filter(tool => tool === tag || tool === tagsArray.filter(tag => {
-        return tag === tool})
-       ))
-      {
-        return data
-      }
-
-     else if(tag === data.role && 
-        tag === data.level && 
-        tag === data.languages.filter(language => language === tag) &&
-        tag ==  data.tools.filter(tool => tool === tag)){
-         return data;
+     
+       if(data.role === tag || data.role === tagsArray.filter(tag => {
+         return tag === data.role
+       })
+       if(data.level === tag || data.level === tagsArray.filter(tag => {
+           return tag === data.level
+          })return data ;
+       if(data.languages.filter(language => language === tag || language === tagsArray.filter(tag => {
+          return tag === language
+       })return data;
+       if(data.tools.filter(tool =>  tool ===  tag || tool === tagsArray.filter(tag => {
+           return tag === tool
+         })return data;     
+       if(tag === data.role && 
+          tag === data.level && 
+          tag === data.languages.filter(language => language === tag) &&
+          tag ==  data.tools.filter(tool => tool === tag)){
+           return data;
         }
+         if(tag === data.role || 
+          tag === data.level ||
+          tag === data.languages.filter(language => language === tag) ||
+          tag ==  data.tools.filter(tool => tool === tag)){
+           return data;
+        }
+        
   
 
   function removeTag(tag){
