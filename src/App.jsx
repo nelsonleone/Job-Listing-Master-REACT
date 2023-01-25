@@ -31,7 +31,7 @@ function App() {
      
        if(data.role === tag || data.role === tagsArray.filter(tag => {
          return tag === data.role
-       })return data;
+       }))return data;
        if(data.level === tag || data.level === tagsArray.filter(tag => {
            return tag === data.level
           }))return data ;
