@@ -31,16 +31,16 @@ function App() {
      
        if(data.role === tag || data.role === tagsArray.filter(tag => {
          return tag === data.role
-       })
+       })return data;
        if(data.level === tag || data.level === tagsArray.filter(tag => {
            return tag === data.level
-          })return data ;
+          }))return data ;
        if(data.languages.filter(language => language === tag || language === tagsArray.filter(tag => {
           return tag === language
-       })return data;
+       }))return data;
        if(data.tools.filter(tool =>  tool ===  tag || tool === tagsArray.filter(tag => {
            return tag === tool
-         })return data;     
+         }))return data;     
        if(tag === data.role && 
           tag === data.level && 
           tag === data.languages.filter(language => language === tag) &&
