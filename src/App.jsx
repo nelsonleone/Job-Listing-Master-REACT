@@ -19,7 +19,7 @@ function App() {
     setChosenTagsArray(prevState => {
       return [...prevState,tag]
     })
-    renderChosenTag()
+    renderChosenTag(tag)
   }
 
 
