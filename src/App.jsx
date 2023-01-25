@@ -43,14 +43,14 @@ function App() {
       if(data.languages.filter(language => {
         return language === tag || language === tagsArray.filter(tag => {
           return tag === language
-        })[0]
+        })
       })){
         return data;
       }
       if(data.tools.filter(tool => {
         return tool === tag || tool === tagsArray.filter(tag => {
           return tag === tool
-        })[0]
+        })
       })){
         return data;
       }
