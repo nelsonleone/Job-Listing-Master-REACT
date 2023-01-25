@@ -32,7 +32,7 @@ function App() {
         return tag ===  data.level
       })){
         return data;
-      }S
+      }
     setJobsData(newArray)
   }
     
