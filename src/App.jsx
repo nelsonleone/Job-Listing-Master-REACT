@@ -26,11 +26,26 @@ function App() {
 
 
   // handling the chosen tags , and rendering there contents
- function renderChosenTag(tag){
+  function renderChosenTag(tag){
     const newArray = listData.filter((data,index) => {
-      if(data.level === tag || data.level === tagsArray.filter(tag => {
-        return tag ===  data.level
-      })){
+      if(data.role === tag || data.role === tagsArray[index]){
+        return data
+      }
+     else if(data.level === tag ||data.level === tagsArray[index]){
+        return data
+      }
+     else if(data.languages.filter(language => language === tag || language === tagsArray[index])[0]){
+        return data
+      }
+     else if(data.tools.filter(tool => tool === tag || tool === tagsArray[index])[0]){
+        return data
+      }
+     
+     else if(tag === data.role && 
+        tag === data.level && 
+        tag === data.languages.filter(language => language === tag)[0] &&
+        tag ==  data.tools.filter(tool => tool === tag)[0]
+        ){
         return data;
       }
     })
