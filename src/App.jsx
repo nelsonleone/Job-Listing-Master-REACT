@@ -31,32 +31,30 @@ function App() {
       if(data.role === tag || data.role === tagsArray[index]){
         return data
       }
-     else if(data.level === tag ||data.level === tagsArray[index]){
+      if(data.level === tag || data.level === tagsArray.filter(tag => {
+         return tag === data.level
+      }){
         return data
       }
-     else if(data.languages.filter(language => language === tag || language === tagsArray[index])){
+      if(data.languages.filter(language => language === tag || language === tagsArray.filter(tag => {
+        return tag === language})
+       ))
+      {
         return data
       }
-     else if(data.tools.filter(tool => tool === tag || tool === tagsArray[index])){
+      if(data.tools.filter(tool => tool === tag || tool === tagsArray.filter(tag => {
+        return tag === tool})
+       ))
+      {
         return data
       }
 
      else if(tag === data.role && 
         tag === data.level && 
         tag === data.languages.filter(language => language === tag) &&
-        tag ==  data.tools.filter(tool => tool === tag)[0]){
+        tag ==  data.tools.filter(tool => tool === tag)){
          return data;
         }
-      if(tag === data.role || 
-        tag === data.level || 
-        tag === data.languages.filter(language => language === tag) ||
-        tag ==  data.tools.filter(tool => tool === tag)
-        ){
-        return data;
-      }
-    })
-    setJobsData(newArray)
-  }
   
 
   function removeTag(tag){
