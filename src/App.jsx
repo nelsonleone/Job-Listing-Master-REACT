@@ -32,29 +32,7 @@ function App() {
         return tag ===  data.level
       })){
         return data;
-      }
-
-      if(data.role === tag || data.role === tagsArray.filter(tag => {
-        return tag === data.role
-      })){
-        return data;
-      }
-
-      if(data.languages.filter(language => {
-        return language === tag || language === tagsArray.filter(tag => {
-          return tag === language
-        })
-      })){
-        return data;
-      }
-      if(data.tools.filter(tool => {
-        return tool === tag || tool === tagsArray.filter(tag => {
-          return tag === tool
-        })
-      })){
-        return data;
-      }
-    })
+      }S
     setJobsData(newArray)
   }
     
