@@ -17,7 +17,7 @@ function App() {
     })
     setRenderTags(true)
     setChosenTagsArray(prevState => {
-      return [...prevState,tag]
+      return new Set([...prevTags,tag])
     })
     renderChosenTag()
   }
