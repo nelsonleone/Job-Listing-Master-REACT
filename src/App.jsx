@@ -32,7 +32,7 @@ function App() {
       const hasMatchingLevel = chosenTagsArray.includes(job.level);
       const hasMatchingLanguages = job.languages.some(language => chosenTagsArray.includes(language));
       const hasMatchingTools = job.tools.some(tool => chosenTagsArray.includes(tool));
-      return hasMatchingRole && hasMatchingLevel && hasMatchingLanguages && hasMatchingTools;
+      return hasMatchingRole || hasMatchingLevel || hasMatchingLanguages || hasMatchingTools;
     })
     setJobsData(matchingJobs)
   }
