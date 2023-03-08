@@ -27,14 +27,14 @@ function App() {
 
   // handling the chosen tags , and rendering there contents
   function renderChosenTag(){
-    const matchingJobs = jobs.filter(job => {
+    const matchingJobs = jobsData.filter(job => {
       const hasMatchingRole = chosenTagsArray.includes(job.role);
       const hasMatchingLevel = chosenTagsArray.includes(job.level);
       const hasMatchingLanguages = job.languages.some(language => chosenTagsArray.includes(language));
       const hasMatchingTools = job.tools.some(tool => chosenTagsArray.includes(tool));
       return hasMatchingRole && hasMatchingLevel && hasMatchingLanguages && hasMatchingTools;
     })
-    setJobsData(newArray)
+    setJobsData(matchingJobs)
   }
     
   
